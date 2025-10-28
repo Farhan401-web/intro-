@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY biodata</title>
+    <style>
+        * {
+            justify-content: center;
+            max-width: 100%;
+            max-height: 100%;
+            flex-wrap: nowrap;
+            /* position: relative;    it will bring the button behind the box */
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background:
+                /* linear-gradient(rgba(112, 117, 223, 0.85), rgba(143, 148, 251, 0.85)), */
+                url('./farhan.jpg') fixed;
+            background-size: cover;
+            height: 5000px;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            background-attachment: fixed;
+            width: 90%;
+            margin: 50px auto;
+            height: 100%;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-family: Showcard Gothic;
+            font-size: 50px;
+            text-align: center;
+
+        }
+
+
+        p {
+            font-family: Arial Rounded MT;
+            text-align: center;
+        }
+
+        .head-div {
+            color: rgb(0, 0, 0);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .skl {
+            width: 130px;
+            height: 130px;
+            border-radius: 30%;
+            border: 3px solid #00c6ff;
+        }
+
+
+        .head-div_img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgba(17, 255, 203, 0.979);
+            transition: border-color 0.3s ease, transform 0.3s ease;
+
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .header {
+            background-color: rgba(67, 75, 228, 0.85);
+            color: rgb(99, 214, 176);
+            border-radius: 30px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+            margin: 35px auto;
+            overflow: hidden;
+            animation: fadeIn 1s ease;
+            transition: transform 0.3s ease;
+        }
+
+
+
+        p {
+
+            font-size: 20px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .about {
+            background: rgba(250, 246, 246, 0.719);
+            margin-bottom: 55px;
+            padding: 28px 33px;
+            border-radius: 20px;
+            color: #333;
+            /* box-shadow: 0 0 30px #00800088; */
+            transition: box-shadow 0.3s ease;
+        }
+
+        .skills {
+            background: rgba(10, 10, 10, 0.555);
+            color: #aca7a7;
+            margin-bottom: 55px;
+            padding: 28px 33px;
+            font-size: 28px;
+            transition: box-shadow 0.3s ease;
+            background: rgba(10, 10, 10, 0.555);
+            color: #aca7a7;
+            border-radius: 20px;
+            /* box-shadow: 0 0 30px #00800088; */
+            transition: box-shadow 0.3s ease;
+            font-family: Showcard Gothic;
+        }
+
+        .projects {
+            background: rgba(250, 246, 246, 0.719);
+            /* margin-bottom: 55px; */
+            /* padding: 28px 33px; */
+            border-radius: 20px;
+            color: #333;
+            /* box-shadow: 0 0 30px #00800088; */
+            transition: box-shadow 0.3s ease;
+          background-size: auto;
+
+        }
+
+        .contact {
+            background: rgba(10, 10, 10, 0.555);
+            margin-bottom: 55px;
+            color: #aca7a7;
+            padding: 28px 33px;
+            border-radius: 20px;
+            /* box-shadow: 0 0 30px #00800088; */
+            transition: box-shadow 0.3s ease;
+        }
+
+        nav {
+            position: fixed;
+            top: 70%;
+            right: 2px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        button {
+            background: #00c6ff;
+            border: 2px solid aqua;
+            font-weight: 250;
+            padding: 12px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(161, 140, 209, 0.4);
+            transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+            font-family: Arial Rounded MT;
+            text-align: left;
+            min-width: 80px;
+            user-select: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 12px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000000;
+        }
+
+        button:hover
+
+        /* ,button:focus*/
+            {
+            background: linear-gradient(135deg, #8b68dd, #6c44cf);
+            border: #6c44cf;
+            color: #f0e9ff;
+            box-shadow: 0 6px 12px rgba(123, 95, 193, 0.7);
+            outline: none;
+            transform: scale(1.05);
+        }
+
+        a:hover {
+            color: aliceblue;
+        }
+
+        .farhan {
+            background-color: rgba(48, 57, 224, 0.85);
+            margin-left: 40px;
+            margin-right: 40px;
+            margin-bottom: 40px;
+            border-radius: 30px;
+
+        }
+
+
+        h5 {
+            margin-left: 40px;
+            margin-top: 10px;
+            font-size: 30px;
+        }
+
+        .image-row {
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            /* centers the images horizontally */
+            gap: 20px;
+            /* space between images */
+            padding: 20px;
+        }
+
+        .image-row img {
+            width: 100px;
+            /* adjust as needed */
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .socal {
+            text-align: center;
+        }
+
+        .container {
+            position: relative;
+            text-align: center;
+            color: white;
+              width: 130px;
+            height: 130px;
+            margin-top: 5%;
+        }
+        .container img{
+            border-radius: 15%;
+            bottom: 50px;
+        }
+
+        .bottom-right {
+            position: absolute;
+            bottom: 2px;
+            right: 38%;
+        }
+        .body {
+      font-family: "Poppins", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .card {
+      width: 360px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: box-shadow 0.3s ease;
+      
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      color: #1f2937;
+      margin: 0 0 10px;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #6b7280;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .card a {
+      text-decoration: none;
+      color: #4f46e5;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .card a:hover {
+      color: #3730a3;
+    }
+    </style>
+</head>
+
+<body>
+    <section class="header">
+        <center>
+            <div class="head-div_img" style="margin-top: 20px;">
+                <img src="" alt="">
+            </div>
+        </center>
+        <div class="farhan" style="margin: 20px;">
+            <h1>Farhan Shaikh</h1>
+            <p>Looking for a job / <br>
+                Freelancing Project.
+            </p>
+            <p style="margin-bottom: 5px;"> <u>18 yrs web developer</u>
+                with experience in
+                building websites and projects.</p>
+        </div>
+
+
+    </section>
+
+    <!-- Index -->
+    <nav class="nav">
+        <button>
+            <a href="#about">ℹ️ About</a>
+        </button>
+        <button>
+            <a href="#skills">💡 Skills</a>
+        </button>
+        <button>
+            <a href="#projects">📁 Projects</a>
+        </button>
+        <button>
+            <a href="#contact">☎️ contact</a>
+        </button>
+    </nav>
+
+    <!-- About Section -->
+    <section>
+        <div class="about" id="about">
+            <h1>About Me</h1>
+            <p style="gap: 0.02px;font-size: 20px;">As a dedicated front-end developer with a flair for beautiful,
+                responsive designs, I've turned lines of code into stunning user experiences. From dynamic websites to
+                interactive apps, I blend creativity with functionality, ensuring every project is not just functional
+                but visually captivating.</p>
+        </div>
+    </section>
+
+    <!-- skills -->
+
+    <div class="skills" id="skills">
+        <h2 style="text-align: center;">Technical Expertise</h2>
+        <div>
+            <section class="image-row">
+                <img src="./HTML5_img.jpg" alt="Beautiful HTML image">
+                <img src="./CSS3_img.jpg" alt="Beautiful CSS photo">
+                <img src="./python_img.jpg" alt="Beautiful Python image">
+            </section>
+            <section class="image-row">
+                <img src="./C_img2.jpg" alt="Beautiful C photo">
+                <img src="./c++_img.jpg" alt="Beautiful CPP image">
+            </section>
+        </div>
+    </div>
+
+    <!-- projects -->
+    <div class="projects" id="projects"  style="padding: 28px 33px;">
+        <h1>My Projects</h1>
+ <div class="body" style="margin-top: 0%;">
+  <div class="card">
+    <img src="./samrath_gym.jpg" alt="Error" />
+    <div class="card-content" style="background-color:white;text-align: center;" >
+      <h3>Samrat GYM</h3>
+      <p>
+        A stunning online store built with React, featuring seamless shopping
+        and payment integration.
+        <br>      <a href="#">View Live</a>
+
+      </p>
+    </div>
+<br>
+  </div>
+  </div>  
+ <div class="body">
+  <div class="card">
+    <img src="./c++_img.jpg" alt="Error" />
+    <div class="card-content" style="background-color:white;text-align: center;" >
+      <h3>FitIn GYM</h3>
+      <p>
+        A stunning online store built with React, featuring seamless shopping
+        and payment integration.
+      </p>
+      <a href="#">View Live</a>
+    </div>
+  </div>
+  </div>  </div>
+<br><br><br>
+    <!-- contact-->
+    <section>
+        <div class="contact" id="contact">
+            <h1>Let's connect</h1>
+            <div class="contact">
+                <p><strong>📞 Phone:</strong><a style="color: #aca7a7;" href="tel:+91 75882 19649"> +91758821 9649</a>
+                </p>
+                <p><strong>📩 Email:</strong><a style="color: #aca7a7;font-size: 20px;  font-size-adjust: 0.545;"
+                        href="farhanimtiyaz22@gmail.com"> farhanimtiyaz22@gmail.com</a></p>
+                <div class="socal">
+                    <a href="https://www.instagram.com/shk_farhan22/?utm_source=qr&igsh=MWVqdWMxNXFrNWppeQ%3D%3D#"><img
+                            src="./insta.jpg" alt="Error"></a>
+                    <a href=""><img src="./whatsapp.jpg" alt="Error"></a>
+                    <a href=""><img src="./linkedin.jpg" alt="Error"></a>
+                </div>
+            </div>
+    </section>
+</body>
+<center>
+    <footer style="margin-bottom: 10%;">
+        <h4 style="color: #aca7a7;margin-bottom: -5px;margin-top: 10%;">© 2025-30 Farhan Shaikh. All Rights Reserved
+        </h4>
+        <br>
+        <section>
+            <nav>
+                <a href=""></a>
+            </nav>
+        </section>
+    </footer>
+</center>
+
+</html>
